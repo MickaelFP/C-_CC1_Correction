@@ -1,0 +1,69 @@
+/*
+Partie 1:
+
+.FF -> F & F -> 15 & 15
+15 -> 1111
+1111 & 1111 -> 11111111 -> 255
+
+.4C
+*/
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main () {
+  string mot = "1";
+  
+  bool isValid = false;
+  while (!isValid) {
+   cout << "veuillez entrer un mot : ";
+   cin >> mot;
+   isValid = true;  
+   for (int i = 0; i < mot.size(); i++) {
+      if(!isalpha(mot[i])) {
+        isValid = false;
+        break;
+      }
+    }
+  }
+  
+  for (int i = 0; i < mot.size(); i++) {
+    mot[i] = toupper(mot[i]);
+  }
+  
+  int vie = 10;
+  
+  string mot2 = "";
+  for (int i = 0; i < mot.size(); i++) {
+      mot2 += "_";
+    }
+  cout << mot2 << endl;
+  
+  while (vie > 0 && mot != mot2) {
+    char temp = "1&;
+    cout << "vie = : " << vie;
+    
+    while (!isalpha(temp)) {
+      cout << "entrez 
+      cin.clear();
+      cin.ignore(numeric_limits<streamsize>::max(), '\n');
+      cin >> temp;
+    
+    bool found = false;
+    
+    for (int i = 0; i < mot.size(); i++) {
+      if (temp == mot[i]) {
+        mot2[i] = temp;
+        found = true;
+      }
+    }
+    if (!found) {
+      cout << "Lettre non trouve ! " << endl;
+      vie--;
+    }
+    cout << mot2;
+  }
+  return 0;
+}
